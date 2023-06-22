@@ -1,10 +1,5 @@
 import './globals.css'
 import { Libre_Franklin } from 'next/font/google';
-import { config } from '@fortawesome/fontawesome-svg-core';
-import '@fortawesome/fontawesome-svg-core/styles.css'
-
-config.autoAddCss = false;
-
 
 const libre = Libre_Franklin({ subsets: ['latin'] })
 
