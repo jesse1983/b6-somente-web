@@ -21,7 +21,7 @@ export default function Navigation() {
         <div className="flex flex-row justify-center sm:justify-between h-full">
           <div className="flex justify-center items-center">
             <Image
-              src="/Logos.svg"
+              src={"/Logos.svg"}
               width={400}
               height={87}
               alt="C6 Somente"

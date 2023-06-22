@@ -166,7 +166,7 @@ export default function VideoBackground() {
                 <div className="next">
                   <a href="#next" onClick={nextBanner}>
                     <Image
-                      src="/nav.svg"
+                      src={"/nav.svg"}
                       width={24}
                       height={42}
                       alt="Próximo"
