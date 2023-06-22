@@ -6,7 +6,7 @@ export default function Footer() {
     { title: "Instagram", url: "https://www.instagram.com/mundosomente" },
     { title: "Facebook", url: "https://www.facebook.com/mundosomente" },
     {
-      title: "Linkedin",
+      title: "LinkedIn",
       url: "https://www.linkedin.com/company/somente/?viewAsMember=true",
     },
   ];
@@ -59,7 +59,7 @@ export default function Footer() {
                   className="max-w-auto"
                 />
               </div>
-              <div className="flex-1">{media.title}</div>
+              <div className="flex-1 text-xl">{media.title}</div>
             </div>
           ))}
         </div>

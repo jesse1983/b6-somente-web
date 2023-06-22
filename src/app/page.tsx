@@ -13,8 +13,8 @@ export default function Home() {
         <VideoBackground />
       </header>
       <main className="pb-10">
-        <div className="container mx-auto"><Icons /></div>
         <div className="container mx-auto"><Carousel /></div>
+        <div className="container mx-auto"><Icons /></div>
         <Numbers />
         <Footer />
       </main>

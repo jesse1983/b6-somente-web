@@ -10,4 +10,7 @@
   video {
     object-fit: fill;
   }
+  body {
+    overflow-x: hidden;
+  }
 }

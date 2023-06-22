@@ -1,7 +1,27 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, LegacyRef } from "react";
 import Image from "next/image";
+
+const VideoBg = ({
+  src,
+  videoComponent,
+}: {
+  src: string;
+  videoComponent: LegacyRef<HTMLVideoElement>;
+}) => {
+  return (
+    <video
+      className="h-screen w-auto sm:w-screen"
+      autoPlay
+      loop
+      muted
+      ref={videoComponent}
+    >
+      <source src={src} type="video/mp4" />
+    </video>
+  );
+};
 
 export default function VideoBackground() {
   const delay = 1000;
@@ -92,7 +112,7 @@ export default function VideoBackground() {
   const setBanner = (i: number) => {
     backwardAllVideosExcept(current);
     setCurrent(i);
-  }
+  };
 
   const backwardAllVideosExcept = (i: number) => {
     banners
@@ -137,15 +157,16 @@ export default function VideoBackground() {
         >
           <div className="h-screen w-screen absolute z-10 flex">
             <div className="absolute h-screen w-screen bg-gradient-to-b from-slate-900 to-slate-500 from-10% opacity-75"></div>
-            <video
-              className="h-auto w-screen"
-              autoPlay
-              loop
-              muted
-              ref={banner.videoComponent}
-            >
-              <source src={banner.videoSrc} type="video/mp4" />
-            </video>
+            <div className="w-screen h-screen overflow-hidden">
+              <div
+                className="ml-[-50vh] sm:ml-0 w-[200vh] sm:w-screen"
+              >
+                <VideoBg
+                  src={banner.videoSrc}
+                  videoComponent={banner.videoComponent}
+                />
+              </div>
+            </div>
           </div>
           <div className="h-screen w-screen absolute overflow-hidden z-20 flex justify-between flex-col">
             <div className="nav h-20"></div>

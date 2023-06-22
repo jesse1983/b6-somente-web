@@ -12,7 +12,7 @@ const items: Item[] = [
   { title: "Motivação", bg: "./motivacao.png" },
   { title: "Produtividade", bg: "./produtividade.png" },
   { title: "Inteligência emocional", bg: "./inteligencia-emocional.png" },
-  { title: "Auto conhecimento", bg: "./auto-conhecimento.png" },
+  { title: "Autoconhecimento", bg: "./auto-conhecimento.png" },
   { title: "Relacionamento", bg: "./relacionamento.png" },
 ];
 
