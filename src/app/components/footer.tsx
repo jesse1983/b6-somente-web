@@ -2,10 +2,18 @@
 import Image from "next/image";
 
 export default function Footer() {
-  const medias = ["Facebook", "Linkedin", "Instagram"];
-  const openMedia = (ev: React.MouseEvent<HTMLDivElement>, media: string) => {
+  const medias = [
+    { title: "Instagram", url: "https://www.instagram.com/mundosomente" },
+    { title: "Facebook", url: "https://www.facebook.com/mundosomente" },
+    {
+      title: "Linkedin",
+      url: "https://www.linkedin.com/company/somente/?viewAsMember=true",
+    },
+  ];
+  const openMedia = (ev: React.MouseEvent<HTMLDivElement>, url: string) => {
+    console.log(url);
     ev.preventDefault();
-    console.log(ev, media);
+    window.open(url, "_blank");
   };
   return (
     <footer>
@@ -37,20 +45,21 @@ export default function Footer() {
         </div>
         <div className="flex align-middle justify-center flex-col gap-10">
           {medias.map((media) => (
-            <div className="flex gap-4 cursor-pointer font-bold w-36 m-auto" key={media}>
-              <div
-                className="flex-none"
-                onClick={(ev) => openMedia(ev, "FACEBOOK")}
-              >
+            <div
+              className="flex gap-4 cursor-pointer font-bold w-36 m-auto"
+              key={media.title}
+              onClick={(ev) => openMedia(ev, media.url)}
+            >
+              <div className="flex-none">
                 <Image
-                  src={`./${media.toLowerCase()}.svg`}
+                  src={`./${media.title.toLowerCase()}.svg`}
                   width={24}
                   height={24}
-                  alt="Facebook"
+                  alt={media.title}
                   className="max-w-auto"
                 />
               </div>
-              <div className="flex-1">{media}</div>
+              <div className="flex-1">{media.title}</div>
             </div>
           ))}
         </div>
