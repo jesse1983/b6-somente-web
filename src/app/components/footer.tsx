@@ -31,9 +31,21 @@ export default function Footer() {
           <div>
             <p className="mb-5 font-bold">Contato</p>
             <p className="mb-5">
+            <Image
+                  src={'./icon-phone.svg'}
+                  width={24}
+                  height={24}
+                  alt='(11) 2078-0220'
+                  className="max-w-auto float-left"
+                />
               (11) 2078-0220 <br />
-              (11) 3801-1521 <br />
-              (11) 3865-3013 <br />
+              <Image
+                  src={'./icon-whatsapp.svg'}
+                  width={24}
+                  height={20}
+                  alt='(11) 4935-9010'
+                  className="max-w-auto float-left"
+                />
               (11) 4935-9010
             </p>
             <p>

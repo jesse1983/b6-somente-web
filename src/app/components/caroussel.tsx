@@ -6,14 +6,15 @@ import Image from "next/image";
 type Item = {
   title: string;
   bg: string;
+  text: string;
 };
 
 const items: Item[] = [
-  { title: "Motivação", bg: "./motivacao.png" },
-  { title: "Produtividade", bg: "./produtividade.png" },
-  { title: "Inteligência emocional", bg: "./inteligencia-emocional.png" },
-  { title: "Autoconhecimento", bg: "./auto-conhecimento.png" },
-  { title: "Relacionamento", bg: "./relacionamento.png" },
+  { title: "Motivação", bg: "./motivacao.png", text: 'A maioria das vezes a falta de motivação afeta um bom convívio profissional e pessoal. A ajuda de um psicólogo mostrará o caminho certo a seguir!' },
+  { title: "Produtividade", bg: "./produtividade.png", text: 'A falta de produtividade na maioria das vezes é relacionada com a parte emocional. Ter um bom equilíbrio emocional garante uma maior eficiência na realização das tarefas do nosso dia a dia.' },
+  { title: "Inteligência emocional", bg: "./inteligencia-emocional.png", text: 'É relacionado ao controle consciente das emoções. Tanto profissionalmente ou pessoalmente, ter uma boa inteligência emocional evita graves problemas mentais.' },
+  { title: "Autoconhecimento", bg: "./auto-conhecimento.png", text: 'Conhecimento de si próprio é fundamental para uma vida mais produtiva e feliz. Ter o domínio desse conhecimento pode evitar problemas de autoestima, ansiedade e instabilidade emocional.' },
+  { title: "Relacionamento", bg: "./relacionamento.png", text: 'Uma boa ligação afetiva com pessoas, profissionalmente e na nossa vida pessoal é essencial para nossa vida. Afinal não é possível viver completamente sozinho.' },
 ];
 
 export default function Carousel() {
@@ -66,6 +67,8 @@ export default function Carousel() {
 
   return (
     <div className="mx-auto container py-10">
+      <div className="text-center text-4xl font-light mb-10">Com o que podemos te ajudar?</div>
+
       <div className="flex gap-10 items-center mb-10">
         <div className="flex-none">
           <a href="#prev" onClick={prev}>
@@ -85,8 +88,10 @@ export default function Carousel() {
               key={e.title}
               style={{ backgroundImage: `url(${e.bg})` }}
             >
-              <div className="text-white text-xl font-bold p-6 bg-blue-700/60 flex-none">{e.title}</div>
-              <div className="text-white p-6 bg-blue-700/60 flex-1 opacity-0 hover:opacity-100 transition-all duration-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum urna nulla, luctus eu massa sit amet, porta luctus enim. Fusce eget metus vel quam vehicula efficitur et a diam.</div>
+              <div className="text-white text-xl font-bold p-6 bg-blue-700/70 flex-none">{e.title}</div>
+              <div className="text-white p-6 bg-blue-700/70 flex-1 opacity-0 hover:opacity-100 transition-all duration-500">
+                {e.text}
+              </div>
             </div>
           ))}
         </div>
@@ -103,7 +108,7 @@ export default function Carousel() {
           </a>
         </div>
       </div>
-      <div className="text-center text-4xl font-light">Sempre teremos um horário para você.</div>
+      <div className="text-center text-4xl font-light">Saúde mental para todos!</div>
     </div>
   );
 }

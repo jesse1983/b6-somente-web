@@ -39,28 +39,31 @@ export default function VideoBackground() {
       ),
       videoComponent: useRef<HTMLVideoElement>(null),
       duration: 0,
+      margin: 25,
     },
     {
       videoSrc: "./banner02.mp4",
       slogan: (
         <span>
-          De <strong className="text-sky-500">onde</strong> estiver <br /> e a
-          qualquer <strong className="text-sky-500">momento</strong>
+          Consultas com <strong className="text-sky-500">psicólogos</strong> <br />
+          e <strong className="text-sky-500">médicos psiquiátricos</strong>
         </span>
       ),
       videoComponent: useRef<HTMLVideoElement>(null),
       duration: 0,
+      margin: 50,
     },
     {
       videoSrc: "./banner03.mp4",
       slogan: (
         <span>
-          Atendimento em <br /> todo{" "}
+          Atendimento online em <br /> todo{" "}
           <strong className="text-sky-500">Brasil</strong>
         </span>
       ),
       videoComponent: useRef<HTMLVideoElement>(null),
       duration: 0,
+      margin: 60,
     },
     {
       videoSrc: "./banner04.mp4",
@@ -73,6 +76,7 @@ export default function VideoBackground() {
       ),
       videoComponent: useRef<HTMLVideoElement>(null),
       duration: 0,
+      margin: 50,
     },
   ];
 
@@ -159,7 +163,7 @@ export default function VideoBackground() {
             <div className="absolute h-screen w-screen bg-gradient-to-b from-slate-900 to-slate-500 from-10% opacity-75"></div>
             <div className="w-screen h-screen overflow-hidden">
               <div
-                className="ml-[-50vh] sm:ml-0 w-[200vh] sm:w-screen"
+                className={`ml-[-${banner.margin}vh] sm:ml-0 w-[200vh] sm:w-screen`}
               >
                 <VideoBg
                   src={banner.videoSrc}
