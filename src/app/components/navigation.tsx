@@ -27,9 +27,9 @@ export default function Navigation() {
         <a
           href="https://api.whatsapp.com/send?phone=551149359010"
           target="_blank"
-          className="bg-blue-700 px-8 py-4 rounded-full lowercase font-bold text-sm"
+          className="bg-blue-700 px-8 py-4 rounded-full uppercase font-bold text-sm"
         >
-          Agende uma consulta
+          Agende sua consulta
         </a>
       </div>
       </div>
