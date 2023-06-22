@@ -70,7 +70,7 @@ export default function Carousel() {
         <div className="flex-none">
           <a href="#prev" onClick={prev}>
             <Image
-              src="/nav-blue.svg"
+              src={"./nav-blue.svg"}
               width={24}
               height={42}
               alt="Anterior"
@@ -93,7 +93,7 @@ export default function Carousel() {
         <div className="flex-none">
           <a href="#next" onClick={next}>
             <Image
-              src="/nav-blue.svg"
+              src="./nav-blue.svg"
               width={24}
               height={42}
               alt="Próximo"

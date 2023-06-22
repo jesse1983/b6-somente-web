@@ -3,10 +3,10 @@ import Image from "next/image";
 
 export default function Icons() {
   const icons = [
-    { title: "Qualidade", icon: "/icon_success.svg" },
-    { title: "Disponibilidade", icon: "/icon_calendar.svg" },
-    { title: "Acessibilidade", icon: "/icon_mouse.svg" },
-    { title: "Resolução", icon: "/icon_brain.svg" },
+    { title: "Qualidade", icon: "./icon_success.svg" },
+    { title: "Disponibilidade", icon: "./icon_calendar.svg" },
+    { title: "Acessibilidade", icon: "./icon_mouse.svg" },
+    { title: "Resolução", icon: "./icon_brain.svg" },
   ];
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 my-10 mx-10">

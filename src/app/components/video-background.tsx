@@ -10,7 +10,7 @@ export default function VideoBackground() {
 
   const banners = [
     {
-      videoSrc: "/banner01.mp4",
+      videoSrc: "./banner01.mp4",
       slogan: (
         <span>
           Como anda a <br /> sua{" "}
@@ -21,7 +21,7 @@ export default function VideoBackground() {
       duration: 0,
     },
     {
-      videoSrc: "/banner02.mp4",
+      videoSrc: "./banner02.mp4",
       slogan: (
         <span>
           De <strong className="text-sky-500">onde</strong> estiver <br /> e a
@@ -32,7 +32,7 @@ export default function VideoBackground() {
       duration: 0,
     },
     {
-      videoSrc: "/banner03.mp4",
+      videoSrc: "./banner03.mp4",
       slogan: (
         <span>
           Atendimento em <br /> todo{" "}
@@ -43,7 +43,7 @@ export default function VideoBackground() {
       duration: 0,
     },
     {
-      videoSrc: "/banner04.mp4",
+      videoSrc: "./banner04.mp4",
       slogan: (
         <span>
           Receita médica de{" "}
@@ -154,7 +154,7 @@ export default function VideoBackground() {
                 <div className="prev">
                   <a href="#prev" onClick={prevBanner}>
                     <Image
-                      src="/nav.svg"
+                      src="./nav.svg"
                       width={24}
                       height={42}
                       alt="Anterior"
@@ -166,7 +166,7 @@ export default function VideoBackground() {
                 <div className="next">
                   <a href="#next" onClick={nextBanner}>
                     <Image
-                      src={"/nav.svg"}
+                      src={"./nav.svg"}
                       width={24}
                       height={42}
                       alt="Próximo"
