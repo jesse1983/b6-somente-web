@@ -10,7 +10,7 @@ export default function Numbers() {
   return (
     <div
       className="bg-gray-900 min-h-96 flex items-center justify-center bg-no-repeat bg-center bg-cover my-10 py-10"
-      style={{ backgroundImage: "url(/bg-numbers.jpg)" }}
+      style={{ backgroundImage: "url(./bg-numbers.jpg)" }}
     >
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
         {nums.map((num) => (
