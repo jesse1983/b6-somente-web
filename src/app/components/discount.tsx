@@ -8,7 +8,7 @@ export default function Discount() {
           <div className="">Cliente C6 tem desconto especial <br />
 no plano de saúde mental!</div>
           <div className="text-xl mt-10">De <span className="line-through text-2xl">R$ 199,90</span></div>
-          <div className="text-2xl">Por <span className="text-5xl font-bold">R$ 99,90</span>/mês</div>
+          <div className="text-2xl text-blue-700">Por <span className="text-5xl font-bold">R$ 99,90</span>/mês</div>
         </div>
       </div>
     </div>
