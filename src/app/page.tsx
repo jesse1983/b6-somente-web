@@ -4,6 +4,7 @@ import Icons from "./components/icons";
 import Carousel from "./components/caroussel";
 import Footer from "./components/footer";
 import Numbers from "./components/numbers";
+import Discount from "./components/discount";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       </header>
       <main className="pb-10">
         <div className="container mx-auto"><Carousel /></div>
+        <Discount />
         <div className="container mx-auto"><Icons /></div>
         <Numbers />
         <Footer />
