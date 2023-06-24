@@ -3,26 +3,6 @@
 import { useState, useRef, useEffect, LegacyRef } from "react";
 import Image from "next/image";
 
-const VideoBg = ({
-  src,
-  videoComponent,
-}: {
-  src: string;
-  videoComponent: LegacyRef<HTMLVideoElement>;
-}) => {
-  return (
-    <video
-      className="h-screen w-auto sm:w-screen"
-      autoPlay
-      loop
-      muted
-      ref={videoComponent}
-    >
-      <source src={src} type="video/mp4" />
-    </video>
-  );
-};
-
 export default function VideoBackground() {
   const delay = 1000;
   const [current, setCurrent] = useState(0);
@@ -39,19 +19,20 @@ export default function VideoBackground() {
       ),
       videoComponent: useRef<HTMLVideoElement>(null),
       duration: 0,
-      margin: 25,
+      margin: 2,
     },
     {
       videoSrc: "./banner02.mp4",
       slogan: (
         <span>
-          Consultas com <strong className="text-sky-500">psicólogos</strong> <br />
-          e <strong className="text-sky-500">médicos psiquiátricos</strong>
+          Consultas com <strong className="text-sky-500">psicólogos</strong>{" "}
+          <br />e{" "}
+          <strong className="text-sky-500">médicos psiquiátricos</strong>
         </span>
       ),
       videoComponent: useRef<HTMLVideoElement>(null),
       duration: 0,
-      margin: 50,
+      margin: 1,
     },
     {
       videoSrc: "./banner03.mp4",
@@ -63,7 +44,7 @@ export default function VideoBackground() {
       ),
       videoComponent: useRef<HTMLVideoElement>(null),
       duration: 0,
-      margin: 60,
+      margin: 1,
     },
     {
       videoSrc: "./banner04.mp4",
@@ -76,7 +57,7 @@ export default function VideoBackground() {
       ),
       videoComponent: useRef<HTMLVideoElement>(null),
       duration: 0,
-      margin: 50,
+      margin: 1,
     },
   ];
 
@@ -150,7 +131,7 @@ export default function VideoBackground() {
   }, [current, init]);
 
   return (
-    <div className="h-screen w-screen absolute overflow-hidden">
+    <div className="h-screen w-screen absolute overflow-hidden inset-0">
       {banners.map((banner, i) => (
         <div
           className={
@@ -163,39 +144,46 @@ export default function VideoBackground() {
             <div className="absolute h-screen w-screen bg-gradient-to-b from-slate-900 to-slate-500 from-10% opacity-75"></div>
             <div className="w-screen h-screen overflow-hidden">
               <div
-                className={`ml-[-${banner.margin}vh] sm:ml-0 w-[200vh] sm:w-screen`}
+                className={(banner.margin === 1 ? 'ml-neo1' : 'ml-neo2') + ` sm:ml-0 w-[170vh] sm:w-screen`}
               >
-                <VideoBg
-                  src={banner.videoSrc}
-                  videoComponent={banner.videoComponent}
-                />
+                <video
+                  className="h-screen w-auto sm:w-screen"
+                  autoPlay
+                  loop
+                  muted
+                  ref={banner.videoComponent}
+                  poster={banner.videoSrc.replace('mp4', 'jpg')}
+                >
+                  <source src={banner.videoSrc.replace('mp4', 'webm')} type="video/webm" />
+                  <source src={banner.videoSrc} type="video/mp4" />
+                </video>
               </div>
             </div>
           </div>
           <div className="h-screen w-screen absolute overflow-hidden z-20 flex justify-between flex-col">
             <div className="nav h-20"></div>
-            <div className="container m-auto text-center text-4xl sm:text-6xl text-white">
+            <div className="container m-auto text-center text-white">
               <div className="flex justify-between items-center gap-x-10 px-5">
-                <div className="prev">
+                <div className="prev flex-none w-4">
                   <a href="#prev" onClick={prevBanner}>
                     <Image
                       src="./nav.svg"
                       width={24}
                       height={42}
                       alt="Anterior"
-                      className="max-w-auto"
+                      className="w-4"
                     />
                   </a>
                 </div>
-                <div className="slogan">{banner.slogan} </div>
-                <div className="next">
+                <div className="text-3xl sm:text-6xl">{banner.slogan} </div>
+                <div className="next flex-none w-4">
                   <a href="#next" onClick={nextBanner}>
                     <Image
                       src={"./nav.svg"}
                       width={24}
                       height={42}
                       alt="Próximo"
-                      className="max-w-auto"
+                      className="w-4"
                       style={{ transform: "scaleX(-1)" }}
                     />
                   </a>

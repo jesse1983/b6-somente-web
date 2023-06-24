@@ -9,6 +9,15 @@ module.exports = {
     fontFamily: {
       sans: ['Libre Franklin', 'system-ui'],
     },
+    extend: {
+      margin: {
+        neo1: '-50vh',
+        neo2: '-25vh',
+      },
+      height: {
+        screen: 'calc(var(--vh, 1vh) * 100)',
+      }
+    }
     // colors: {
     //   secondary: '#00AEFF',
     // },
