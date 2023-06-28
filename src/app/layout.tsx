@@ -4,7 +4,7 @@ import { Libre_Franklin } from 'next/font/google';
 const libre = Libre_Franklin({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'C6 Somente - Psicologia e Psiquiatria',
+  title: 'C6 & Somente - Psicologia e Psiquiatria',
   description: 'Saúde Mental para todos!',
 }
 
