@@ -24,13 +24,15 @@ export default function Carousel() {
 
   const [first, setFirst] = useState(4);
 
-  const next = () => {
+  const next = (ev?: React.MouseEvent<HTMLAnchorElement>) => {
+    ev?.preventDefault();
     start = new Date().getTime();
     if (first === items.length - 1) setFirst(0);
     else setFirst(first + 1);
   };
 
-  const prev = () => {
+  const prev = (ev?: React.MouseEvent<HTMLAnchorElement>) => {
+    ev?.preventDefault();
     start = new Date().getTime();
     if (first === 0) setFirst(items.length - 1);
     else setFirst(first - 1);

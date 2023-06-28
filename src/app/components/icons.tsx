@@ -9,7 +9,7 @@ export default function Icons() {
     { title: "Resolução", icon: "./icon_brain.svg" },
   ];
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 my-10 mx-10">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 my-10 mx-10 sm:mx-0">
       {icons.map((icon) => (
         <div
           className="bg-gray-200 flex flex-col justify-center items-center p-12 gap-8"
